@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<a href="https://angular.io.com">
+						<img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="angular io logo" style="height: 140px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3>Formation ANGULAR</h3>
+					<p>
+						<small> Zied ZAYANI - Jasmine Conseil</small>
+					</p>
+				</section>
+				<section>
+					<h2>JavaScript</h2>
+					<p>
+						Langage de programmation de scripts dynamiquement typé, employé dans les pages web pour rendre notre application dynamique.
+						Java script est standardisé par ECMA:
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers></code>
+
+						 &lt;script&gt; <br>
+						
+							alert("Message d'alert par java script");
+						
+						<br>
+						  &lt;/script&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>ECMA SCRIPT 6</h2>
+					<p>
+						La version de la spécification que vous connaissez le plus est la version 5, 
+						la version ES6 ajoute plusieurs fonctionnalités à JavaScript comme :
+					</p>
+					<ul>
+						<li>Les classes</li>
+						<li>Les constantes </li>
+						<li>Set et Map</li>
+						<li>Template de string</li>
+						<li>Arrow Functions (fonction flèche)</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>TypeScript</h2>
+						<p>
+							Type script est un langage compilé en javascript, c’est un surcouche de la syntaxe Javascript, il ajoute quelques fonctionnalité:
+						</p>
+						<ul>
+							<li>Types (String , number , any ...)</li>
+							<li>Classe</li>
+							<li>Interface</li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h6>Syntaxe :</h6>
+						<blockquote>  let variable : type ;</blockquote>
+						<h6>Exemples :</h6>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers></code>
+							
+								let name : string = "angular" ;<br>
+								let contactNumber : number = 4;<br>
+								let isContact : boolean = true ;<br>
+
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>WebComponent</h2>
+					<p>
+						Les web component nous permet d’avoir des composants réutilisable et encapsulé,  ils se basent sur un ensemble de standards 
+					</p>
+					<ul>
+						<li>Custom elements</li>
+						<li>Shadow DOM</li>
+						<li>Template</li>
+					</ul>
+				</section>
+				<section>
+					<h2>La philosophie d’Angular</h2>
+					<section>
+						<ul>
+							<li>Angular est un framework orienté composant</li>
+							<li>Un composant est un groupe d’éléments HTML, dans un template, dédiés à une tâche particulière</li>
+							<li>Les composants seront organisés de façon hiérarchique, comme le DOM</li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/components-hierarchie.png" alt="hiérarchique"/>
+					</section>
+					<section>
+						<h6>Exemple composant Angular</h6>
+						<img src="images/first-component.png" alt="first-component"/>
+					</section>
+					<section>
+						<h5>Conception d'une composante</h5>
+						<img src="images/components-angular.png" alt="hiérarchique"/>
+					</section>
+					<section>
+						<h2>DATABINDIG</h2>
+						<ul>
+							<li style="inline-size: max-content;">Interpolation : <span style="color: rgb(230 107 61)">{{user.name}}</span> </li>
+							<li style="inline-size: max-content;">Binding de propriété :<span style="color: rgb(230 107 61)">&lt;p [textContent]="user.name"&gt; &lt;/p&gt;</span> </li>
+							<li style="inline-size: max-content;">Événements :<span style="color: rgb(230 107 61)">&lt;button (click)="function()"&gt;Click!&lt;/button&gt;</span> </li>
+						</ul>
+					</section>
+
+				</section>
+				<section>
+					<h2>ANGULAR CLI</h2>	
+					<p>Angular CLI est un outils en ligne de commande pour simplifier les tâches de développements d'Angular : </p>
+					<ul>
+						<li>Création du projet</li>
+						<li>Génération de composants</li>
+						<li>Exécutions des tests</li>
+						<li>Dépoloiement</li>
+						<li>...</li>
+					</ul>
+				</section>
+				<section>
+					<h2>LAB 1 :</h2>	
+					<ol>
+						<li>Création d'un projet Angular avec Angular CLI</li>
+						<li>Comment créer et utiliser des composants</li>
+						<li>Gestion des données entre le composant et le template</li>
+						<li>Binding de propriété</li>
+						<li>Événements</li>
+					</ol>
+
+				</section>
+
+				<section>
+					<h2>Les directives</h2>	
+					<section>
+						<p>Une directive est semblable à un composant, sauf qu’elle n’a pas de template. Techniquement, la classe
+							Component hérite de la classe Directive dans le framework</p><br>
+						<p>Il y a deux types de directives :</p>
+						<ul>
+							<li>Les directives d’attributs</li>
+							<li>Les directives structurelles</li>
+						</ul>
+					</section>
+					<section>
+						<h6>Les directives d’attributs</h6>	
+						<p>Elles peuvent modifier le comportement des éléments HTML, des attributs, des propriétés et des composants. Elles sont représentées habituellement par des attributs au sein de balises HTML</p><br>					
+						<p>exemples :</p>
+						<ul>
+							<li>NgClass</li>
+							<li>NgModel</li>
+						</ul>
+					
+					</section>
+					<section>
+						<h6>Les directives structurelles</h6>	
+						<p>ces directives sont responsables de mettre en forme une certaine disposition d’éléments HTML, en ajoutant, retirant ou manipulant des éléments</p><br>
+						<p>exemples :</p>
+						<ul>
+							<li>ngFor</li>
+							<li>ngIf</li>
+							<li>ngSwitch</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Les pipes</h2>
+					<section>
+						<p>Les données brutes n’ont pas la forme exacte que l’on voudrait afficher dans la vue. On a
+							envie de les transformer, les filtrer, les tronquer, etc</p><br>
+						<p>Angular nous offre les pipes pour faire ce travail</p><br>
+						<p>Un pipe peut être utilisé dans le HTML, ou dans le code applicatif</p><br>
+					</section>
+					<section>
+						<p>Exemples:</p>
+						<ul>
+							<li>slice : Afficher un sous-ensemble d’une collection</li>
+							<li>uppercase et lowercase</li>
+							<li>number : Formatter un nombre</li>
+							<li>percent : Afficher un pourcentage</li>
+							<li>currency : Formater une somme d’argent dans la devise que tu veux</li>
+							<li>date : Transforme une date en chaîne de caractères au format désiré</li>
+						</ul>
+					</section>
+					<section>
+						<h5>Exemples Pipe</h5>
+						<img src="images/pipe-exemple.png" alt="hiérarchique"/>
+					</section>
+					<section>
+						<h5>Résultat Pipe</h5>
+						<img src="images/pipe-resultat.png" alt="hiérarchique"/>
+					</section>
+					
+				</section>
+				<section>
+						<h2>LAB 2</h2>	
+						<ol>
+							<li>Utilisation des directives </li>
+							<li>Utilisation d'une classe DTO avec TypeScript</li>
+							<li>Paramétrage de composant avec le décorateur <strong style="color: antiquewhite;">@Input</strong></li>
+							<li>Transfert des données vers le composant parent avec <strong style="color: antiquewhite;">@Output</strong></li>
+							<li>Utilisation Pipe dans HTML</li>
+							<li>Utilisation Pipe dans le code</li>
+						</ol>
+				</section>
+
+				<section>
+					<h2>Injection de dépandences</h2>	
+					<section>
+					<p>L’injection de dépendances est un design pattern. Un composant de notre
+						application peut avoir besoin de faire appel à des fonctionnalités qui sont définies dans d’autres
+						parties de l’application. C’est ce que l’on appelle une dépendance : le
+						composant dépend du service. Au lieu de laisser au composant la charge de créer une instance du
+						service, l’idée est que le framework crée l’instance du service lui-même, et la fournisse au
+						composant qui en a besoin. Cette façon de procéder se nomme l’inversion de contrôle.</p>
+					</section>
+					<section>
+						<img style="padding-top: 35px;" src="images/dependence-injection.PNG" alt="hiérarchique"/>
+					</section>
+				</section>
+
+				<section>
+					<h2>Services</h2>	
+					<section>
+					<p>
+						Angular propose le concept de services :</p><br> 
+					<p>Les services sont des classes qu'on peut injecter dans des composantes ou dans des autres services.
+					</p><br>
+					<p>
+						Angular fournis quelques services par défaut:
+					</p>
+					<ul>
+						<li>Service Title</li>
+						<li>Service Meta</li>
+					</ul>
+					</section>
+					<section>
+						<h6>Création d'un service</h6>
+						<ul>
+							<li>Un service est une classe TS</li>
+							<li>Il faut lui ajouter le décorateur <strong style="color: antiquewhite;">@Injectable()</strong></li>
+							<li>Un service est un singleton, donc la même instance unique sera injectée
+								partout</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>LAB 3 :Services et Injection</h2>	
+					<ol>
+						<li>Création d'un service</li>
+						<li>Utilisation d'un service dans un composant</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Modules</h2>	
+					<p>Un module dans Angular est un mécanisme permettant de 
+					regrouper des composants,services,directives, pipes etc ...</p>
+					<p></p>
+
+				</section>
+				<section>
+					<h2>Routing</h2>
+					<section>
+						<p>
+							L'ojectif du routeur dans Angular est de permettre d’avoir des URLs compréhensibles qui
+							reflètent l’état de l'application, et déterminer pour chaque URL quels composants utiliser dans la page.
+							Tout cela sans rafraîchir la page et sans lancer de requête auprès de notre serveur : c’est tout l’intérêt d’avoir 
+							une <br><strong style="color: antiquewhite;">Single Page Application</strong>
+						</p>
+					</section>
+					<section>
+						<p>C’est un module optionnel , il n’est pas inclus dans le noyau du framework</p>
+					</section>
+
+				</section>
+				<section>
+					<h2>Routing</h2>
+					<h6>Comment ça marche ?</h6>
+					<section>
+						<p style="padding-top: 50px;">1 : Associations entre les URLs et les composants: </p><br>
+						<img src="images/routing.png" alt="routing"/>
+						<ul>
+							<li><strong style="color: antiquewhite;">path</strong> : quelle URL va déclencher la navigation</li>
+							<li><strong style="color: antiquewhite;">component</strong> : quel composant sera initialisé et affiché</li>
+						</ul>
+					</section>
+					<section>
+						<p style="padding-top: 40px;">2 : Intégration de la configuration: </p><br>
+						<img src="images/add-routes-module.png" alt="config-routing">
+					</section>
+					<section>
+						<p style="padding-top: 40px;">Pour que le composant soit inclus dans notre application, 
+							il faut utiliser le tag  <strong style="color: antiquewhite;">&lt;router-outlet&gt;</strong> dans le template du composant principal</p><br>
+					</section>
+					<section>
+						<img style="padding-top: 40px;" src="images/router-outlet.PNG" alt="router-outlet">
+					</section>
+
+				</section>
+				<section>
+					<h2>LAB 4 :ROUTING</h2>	
+					<ol>
+						<li>Utilisation de module Router</li>
+						<li>Mise en place des routes</li>
+						<li>Navigation et autorisation</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Formulaires</h2>	
+					<section>
+						<p>Angular offre deux façon pour gérer les formulaires: </p>
+						<ol>
+							<li>Formulaire piloté par le template</li>
+							<li>Formulaire piloté par le code</li>
+						</ol>
+					</section>
+
+					<section>
+						<h6>FormControl</h6>
+						<p>C’est la plus petite partie d’un formulaire, et il encapsule l’état du champ et
+							sa valeur:</p>	<br>
+							<p>Un FormControl a plusieurs attributs :</p>
+							<ul>
+								<li><strong style="color: antiquewhite;">valid</strong> : si le champ est valide</li>
+								<li><strong style="color: antiquewhite;">invalid</strong> : si le champ est invalide</li>
+								<li><strong style="color: antiquewhite;">errors</strong> : un objet contenant les erreurs du champ</li>
+								<li><strong style="color: antiquewhite;">value</strong> : la valeur du champ</li>
+							</ul>	
+					</section>
+
+					<section>
+						<h6 style="padding-top: 22px;">FormGroup</h6>
+						<p>FormGroup c'est une classe Angular qui répresente un groupe de formulaire</p>
+						<p>Un FormControl a plusieurs attributs :</p>
+						<ul>
+							<li><strong style="color: antiquewhite;">valid</strong> : si tous les champs sont valides, alors le groupe est valide</li>
+							<li><strong style="color: antiquewhite;">invalid</strong> : si l’un des champs est invalide, alors le groupe est invalide</li>
+							<li><strong style="color: antiquewhite;">errors</strong> : un objet contenant les erreurs du groupe, ou null si le groupe est entièrement valide</li>
+						</ul>
+						
+					
+					</section>
+					<section>
+						<h6>Formulaire piloté par le template</h6>
+						<p>Dans cette méthode, on va mettre de directives dans notre formulaire, 
+							et Angular va construire les instances de 
+							<strong style="color: antiquewhite;">FormControl</strong> et <strong style="color: antiquewhite;">FormGroup</strong> nécessaires automatiquement</p>
+					</section>
+
+					<section>
+						<h6>Formulaire piloté par le code</h6>
+						<p>Angular nous donne la possibiliter de manipuler les formulaires directement depuis le code en utilisant la classe utilitaire <strong style="color: antiquewhite;">FormBuilder</strong>. 
+							C’est plus verbeux mais plus puissant.</p>
+							<p><strong style="color: antiquewhite;">FormBuilder</strong> est une classe utilitaire, avec plein de méthodes bien pratiques pour créer des contrôles
+								et des groupes.</p>
+					</section>
+
+					<section>
+						<h6>Validation</h6>
+						<p>Les validateurs fournis par le framework :</p>
+						<ul>
+							<li><strong style="color: antiquewhite;">Validators.required</strong> pour vérifier qu’un contrôle n’est pas vide</li>
+							<li><strong style="color: antiquewhite;">Validators.minLength(n)</strong> pour s’assurer que la valeur entrée a au moins n caractères </li>
+							<li><strong style="color: antiquewhite;">Validators.maxLength(n)</strong> pour s’assurer que la valeur entrée a au plus n caractères </li>
+							
+						</ul>
+
+					</section>
+					<section>
+						<h6>Validation</h6>
+						<ul>
+							<li><strong style="color: antiquewhite;">Validators.email()</strong> pour s’assurer que la valeur entrée est une adresse email valide </li>
+							<li><strong style="color: antiquewhite;">Validators.min(n)</strong> pour s’assurer que la valeur entrée vaut au moins n </li>
+							<li><strong style="color: antiquewhite;">Validators.max(n)</strong> pour s’assurer que la valeur entrée vaut au plus n </li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>LAB 5 :Formulaires</h2>	
+					<ol>
+						<li>Création d'une formulaire piloté par le code</li>
+						<li>Intégration de validation</li>
+					</ol>
+				</section>
+
+
+				<section>
+					<h2>HTTP</h2>	
+					<section>
+						<ul>
+							<li>Une application web dynamique permet d'envoyer et de recevoir des données par HTTP</li>
+							<li>Angular offre le module <strong style="color: antiquewhite;">HttpClientModule</strong></li>
+							<li><strong style="color: antiquewhite;">HttpClientModule</strong> est un module indépendant, vous pouvez utiliser un autre framework</li>
+						</ul>
+					</section>
+					<section>
+						<h6>Import du module HTTP</h6>
+						<img src="images/import-http.jpg" alt="import-http">
+					</section>
+					<section>
+						<h6>Utilisation du module HTTP</h6>
+						<img src="images/injection-http.jpg" alt="import-http">
+					</section>
+					<section>
+						<h6>Les méthodes HTTP</h6>
+						<p>HttpClient propose plusieurs méthodes, correspondant au verbes HTTP communs :</p>
+						<ul>
+							<li><strong style="color: antiquewhite;">Get</strong></li>
+							<li><strong style="color: antiquewhite;">Post</strong></li>
+							<li><strong style="color: antiquewhite;">Delete</strong></li>
+							<li><strong style="color: antiquewhite;">Patch</strong></li>
+							<li><strong style="color: antiquewhite;">Put</strong></li>
+						</ul>
+						<p>Toutes ces méthodes retournent un objet Observable</p>
+					</section>
+					<section>
+						<h6>Intercepteurs</h6>
+						<p>Le role de l'intercepteur est d'intercepter toutes les requêtes pour les modifier, par exemple pour ajouter un header particulier à
+							certaines d’entre elles</p><br>
+						<p>L'intercepteur c'est un service qui hérite de <strong style="color: antiquewhite;">HttpInterceptor</strong></p>
+					</section>
+
+				</section>
+				<section>
+					<h2>LAB 6 :HTTP</h2>	
+					<ol>
+						<li>Utilisation de service HttpClient</li>
+						<li>Mise en place d'un intercepteur</li>
+					</ol>
+				</section>
+
+
+				<section>
+					<h2>Angular Material</h2>	
+
+				</section>
+				<section>
+					<h2>Fuse</h2>	
+
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
